@@ -1,0 +1,34 @@
+spring:
+    profiles:
+        active: test
+
+server:
+    port: 8080
+
+---
+spring:
+    profile: test
+
+    h2:
+        console:
+            enabled: true
+            path: /test_db
+    datasource:
+        url: jdbc:h2:mem:testdb
+        driver-class: org.h2.Driver
+        username: sa
+        password:
+        platform: h2
+    jpa:
+        database-platform: org.hibernate.dialect.H2Dialect
+        properties.hibernate.format_sql: true
+        properties.hibernate.use_sql_comments: false
+        hibernate:
+            ddl-auto: create
+        show-sql: true
+
+logging:
+    level:
+        org:
+            hibernate:
+                SQL: debug
