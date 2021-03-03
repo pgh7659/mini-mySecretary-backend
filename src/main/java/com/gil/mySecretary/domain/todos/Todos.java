@@ -1,16 +1,22 @@
-package com.gil.mySecretary.domain.todo;
+package com.gil.mySecretary.domain.todos;
 
 import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.Optional;
 
-@Entity
-public class TodoEntity {
+@NoArgsConstructor
+@Getter
+@Entity(name = "todo_table")
+@ToString
+public class Todos {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @Column(length = 200, nullable = false)
     private String title;
@@ -22,10 +28,9 @@ public class TodoEntity {
     private String register;
 
     @Builder
-    public TodoEntity(String title, LocalDate date, String register) {
+    public Todos(String title, LocalDate date, String register) {
         this.title = title;
         this.date = Optional.ofNullable(date).orElse(LocalDate.now());
         this.register = register;
     }
-
 }

@@ -14,18 +14,25 @@ spring:
             enabled: true
             path: /test_db
     datasource:
-        url: jdbc:h2:mem:testdb
-        driver-class: org.h2.Driver
-        username: sa
-        password:
-        platform: h2
+        hikari:
+            # springboot 2.2.0 이상에서 MySQL5InnoDBDialect deprecated. 해당 설정 필요
+            jdbc-url: jdbc:h2:mem://localhost/~/testdb;MODE=MYSQL
+
+# spring 2.1.~ 에서 사용
+#        url: jdbc:h2:mem:testdb
+#        driver-class: org.h2.Driver
+#        username: sa
+#        password:
+#        platform: h2
     jpa:
-        database-platform: org.hibernate.dialect.H2Dialect
-        properties.hibernate.format_sql: true
-        properties.hibernate.use_sql_comments: false
-        hibernate:
-            ddl-auto: create
         show-sql: true
+        properties.hibernate.dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        hibernate.ddl-auto: create
+
+#        database-platform: org.hibernate.dialect.H2Dialect
+# spring 2.1.~ 에서 사용
+#        database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+#        properties.hibernate.use_sql_comments: false
 
 logging:
     level:
