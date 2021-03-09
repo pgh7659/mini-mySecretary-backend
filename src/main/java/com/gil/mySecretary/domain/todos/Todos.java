@@ -22,15 +22,23 @@ public class Todos {
     private String title;
 
     @Column(nullable = false)
+    private Boolean done;
+
+    @Column(nullable = false)
     private LocalDate date;
 
     @Column(nullable = false)
     private String register;
 
     @Builder
-    public Todos(String title, LocalDate date, String register) {
+    public Todos(String title, Boolean done, LocalDate date, String register) {
         this.title = title;
+        this.done = done;
         this.date = Optional.ofNullable(date).orElse(LocalDate.now());
         this.register = register;
+    }
+
+    public void update(Boolean done) {
+        this.done = done;
     }
 }

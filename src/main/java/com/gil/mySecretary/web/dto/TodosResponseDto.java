@@ -9,12 +9,14 @@ import java.time.LocalDate;
 public class TodosResponseDto {
     private Long id;
     private String title;
+    private Boolean done;
     private LocalDate date;
     private String register;
 
     public TodosResponseDto(Todos todos) {
         this.id = todos.getId();
         this.title = todos.getTitle();
+        this.done = todos.getDone();
         this.date = todos.getDate();
         this.register = todos.getRegister();
     }

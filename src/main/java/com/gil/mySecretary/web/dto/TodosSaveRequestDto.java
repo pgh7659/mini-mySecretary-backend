@@ -27,6 +27,7 @@ public class TodosSaveRequestDto {
     public Todos toEntity() {
         return Todos.builder()
                 .title(this.title)
+                .done(false)
                 .date(this.date)
                 .register(this.register)
                 .build();
