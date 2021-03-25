@@ -6,7 +6,7 @@ plugins {
 
 group 'com.gil.mySecretary'
 version '1.0-SNAPSHOT'
-sourceCompatibility = 1.11
+sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
@@ -19,7 +19,12 @@ test {
 
 dependencies {
     implementation('org.springframework.boot:spring-boot-starter-web')
+    implementation('org.springframework.boot:spring-boot-starter-oauth2-client')
 //    implementation('org.springframework.boot:spring-boot-starter-mustache')
+
+    // jwt
+    implementation('io.jsonwebtoken:jjwt:0.9.1')
+
 
     // lombok
     implementation('org.projectlombok:lombok')

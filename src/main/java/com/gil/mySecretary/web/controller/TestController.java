@@ -7,8 +7,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class TestController {
-    @RequestMapping(method = RequestMethod.GET, value = "/test")
+    @RequestMapping(method = RequestMethod.GET, value = "/naver")
     public ResponseEntity getHelloWorld() {
+        System.out.println("hello");
         return ResponseEntity.ok("Hello world!");
     }
 }
