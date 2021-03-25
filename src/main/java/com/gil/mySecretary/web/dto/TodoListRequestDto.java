@@ -1,5 +1,7 @@
 package com.gil.mySecretary.web.dto;
 
+import com.gil.mySecretary.config.auth.CurrentUser;
+import com.gil.mySecretary.config.auth.model.UserPrincipal;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.ToString;

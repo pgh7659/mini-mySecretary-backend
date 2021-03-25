@@ -1,5 +1,7 @@
 package com.gil.mySecretary.web.controller;
 
+import com.gil.mySecretary.config.auth.CurrentUser;
+import com.gil.mySecretary.config.auth.model.UserPrincipal;
 import com.gil.mySecretary.domain.todos.Todos;
 import com.gil.mySecretary.domain.todos.TodosRepository;
 import com.gil.mySecretary.web.dto.TodosResponseDto;
@@ -35,24 +37,24 @@ public class TodosApiControllerTest {
 
     @Test
     public void Todos_save() {
-        String title = "new Todo1";
-        String register = "gil-hyun";
-
-        TodosSaveRequestDto todosSaveRequestDto = TodosSaveRequestDto.builder()
-                .title(title)
-                .register(register)
-                .build();
-
-        String baseurl = "http://localhost:" + port;
-        String saveUrl = baseurl + "/api/todos";
-        ResponseEntity<Long> responseEntity = testRestTemplate.postForEntity(saveUrl, todosSaveRequestDto, Long.class);
-
-        Assertions.assertThat(responseEntity.getStatusCode()).isEqualTo(HttpStatus.OK);
-        Assertions.assertThat(responseEntity.getBody()).isGreaterThan(0L);
-
-        List<Todos> list = todosRepository.findAllByDate(LocalDate.now());
-        System.out.println("Test");
-        System.out.println(list.get(0).toString());
+//        String title = "new Todo1";
+//        @CurrentUser UserPrincipal userPrincipal;
+//
+//        TodosSaveRequestDto todosSaveRequestDto = TodosSaveRequestDto.builder()
+//                .title(title)
+//                .register(register)
+//                .build();
+//
+//        String baseurl = "http://localhost:" + port;
+//        String saveUrl = baseurl + "/api/todos";
+//        ResponseEntity<Long> responseEntity = testRestTemplate.postForEntity(saveUrl, todosSaveRequestDto, Long.class);
+//
+//        Assertions.assertThat(responseEntity.getStatusCode()).isEqualTo(HttpStatus.OK);
+//        Assertions.assertThat(responseEntity.getBody()).isGreaterThan(0L);
+//
+//        List<Todos> list = todosRepository.findAllByDate(LocalDate.now());
+//        System.out.println("Test");
+//        System.out.println(list.get(0).toString());
 //        String getListByDateUrl = baseurl + "/api/todos?date=2021-03-03";
 //        ResponseEntity<List> responseOfListByDate =
 //                testRestTemplate.getForEntity(
