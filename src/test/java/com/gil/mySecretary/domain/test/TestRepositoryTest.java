@@ -10,11 +10,11 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@SpringBootTest
-@Transactional
+//@SpringBootTest
+//@Transactional
 public class TestRepositoryTest {
-    @Autowired
-    TestRepository testRepository;
+//    @Autowired
+//    TestRepository testRepository;
 
 //    @AfterEach
 //    public void cleanup() {
