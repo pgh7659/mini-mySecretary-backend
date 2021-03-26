@@ -24,6 +24,10 @@ public class TodosSaveRequestDto {
         this.register = register;
     }
 
+    public void changeRegister(String register) {
+        this.register = register;
+    }
+
     public Todos toEntity() {
         return Todos.builder()
                 .title(this.title)

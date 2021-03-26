@@ -10,37 +10,37 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@SpringBootTest
-@Transactional
+//@SpringBootTest
+//@Transactional
 public class TestRepositoryTest {
-    @Autowired
-    TestRepository testRepository;
+//    @Autowired
+//    TestRepository testRepository;
 
 //    @AfterEach
 //    public void cleanup() {
 //        testRepository.deleteAll();
 //    }
 
-    @Test
-    @Transactional
-    @Rollback(false)
-    public void saveAndRead() {
-        String title = "Test Title";
-        String content = "Test Content";
-
-        testRepository.save(
-                TestEntity.builder()
-                        .title(title)
-                        .content(content)
-                        .author("Tester")
-                        .build()
-        );
-
-        List<TestEntity> testList = testRepository.findAll();
-        testList.stream().forEach(System.out::println);
-
-        TestEntity test = testList.get(0);
-        assertThat(test.getTitle()).isEqualTo(title);
-        assertThat(test.getContent()).isEqualTo(content);
-    }
+//    @Test
+//    @Transactional
+//    @Rollback(false)
+//    public void saveAndRead() {
+//        String title = "Test Title";
+//        String content = "Test Content";
+//
+//        testRepository.save(
+//                TestEntity.builder()
+//                        .title(title)
+//                        .content(content)
+//                        .author("Tester")
+//                        .build()
+//        );
+//
+//        List<TestEntity> testList = testRepository.findAll();
+//        testList.stream().forEach(System.out::println);
+//
+//        TestEntity test = testList.get(0);
+//        assertThat(test.getTitle()).isEqualTo(title);
+//        assertThat(test.getContent()).isEqualTo(content);
+//    }
 }
