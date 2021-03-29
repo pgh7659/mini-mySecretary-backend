@@ -1,8 +1,8 @@
 ## 프로젝트 명 : MySecretary
 
-> [Mysecretary](http://ec2-13-209-26-145.ap-northeast-2.compute.amazonaws.com/, "project")
+> [Mysecretary Service URL](http://ec2-13-209-26-145.ap-northeast-2.compute.amazonaws.com/, "project")
 
-> front-end project git address: [Mysecretary_front_gitrepository](https://github.com/pgh7659/mini-mysecretary-frontend, "front link")
+> front-end project git address: [Mysecretary_front_gitrepository](https://github.com/pgh7659/mini-mysecretary-frontend/, "front link")
 
 ----------
 #### 개요
