@@ -1,6 +1,6 @@
 spring:
     profiles:
-        include: oauth
+        include: oauth, db
         active: dev
 
 app:
@@ -52,12 +52,6 @@ spring:
 ---
 spring:
     profiles: dev
-
-    datasource:
-        url: jdbc:mariadb://localhost:3306/test?characterEncoding=UTF-8&serverTimezone=UTC
-        driver-class-name: org.mariadb.jdbc.Driver
-        username: root
-        password: qwe0324
 
     jpa:
         properties.hibernate.dialect: org.hibernate.dialect.MySQL5InnoDBDialect
