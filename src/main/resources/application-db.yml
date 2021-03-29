@@ -1,6 +1,0 @@
-spring:
-  datasource:
-    url: jdbc:mariadb://localhost:3306/mysecretary?characterEncoding=UTF-8&serverTimezone=UTC
-    driver-class-name: org.mariadb.jdbc.Driver
-    username: root
-    password: qwe0324
