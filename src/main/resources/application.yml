@@ -9,7 +9,7 @@ app:
         tokenExpirationMsec: 8640000000
     oauth2:
         authorizedRedirectUris:
-            - http://3.36.218.34/login/callback
+            - http://ec2-3-36-218-34.ap-northeast-2.compute.amazonaws.com/login/callback
 
 server:
     port: 8080
